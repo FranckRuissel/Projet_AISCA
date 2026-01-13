@@ -1,0 +1,182 @@
+{
+  "blocs_competences": [
+    {
+      "id_bloc": "bloc_1",
+      "nom": "Architecture Data & Modélisation (Data Marts)",
+      "description": "Le cœur du Data Mart : structurer et stocker la donnée.",
+      "sous_blocs": [
+        {
+          "nom": "Modélisation de Données",
+          "competences": [
+            "modélisation dimensionnelle (kimball, star schema)",
+            "data vault modeling et hubs satellites",
+            "gestion des scd (slowly changing dimensions type 1, 2, 3)",
+            "conception de modèles conceptuels et logiques (mcd, mld)"
+          ]
+        },
+        {
+          "nom": "Modern Data Stack & ELT",
+          "competences": [
+            "transformations elt avec dbt (data build tool)",
+            "orchestration de workflows (airflow, dagster, prefect)",
+            "ingestion de données (fivetran, airbyte, talend)",
+            "sql avancé pour l'analytique (window functions, ctes)"
+          ]
+        },
+        {
+          "nom": "Cloud Data Warehousing",
+          "competences": [
+            "architecture snowflake (virtual warehouses, snowpipe)",
+            "google bigquery et partitionnement",
+            "aws redshift et optimisation",
+            "architecture lakehouse (databricks, delta lake)"
+          ]
+        }
+      ]
+    },
+    {
+      "id_bloc": "bloc_2",
+      "nom": "Ingénierie Big Data & DevOps",
+      "description": "L'infrastructure technique et le traitement massif.",
+      "sous_blocs": [
+        {
+          "nom": "Traitement Distribué & Streaming",
+          "competences": [
+            "développement spark (pyspark, scala)",
+            "streaming temps réel avec kafka ou redpanda",
+            "traitement de flux (flink, spark streaming)",
+            "optimisation des jobs big data"
+          ]
+        },
+        {
+          "nom": "Infrastructure & IaC",
+          "competences": [
+            "conteneurisation (docker) et orchestration (kubernetes)",
+            "infrastructure as code (terraform, ansible)",
+            "scripting d'automatisation (bash, python)",
+            "ci/cd pour la data (github actions, gitlab ci)"
+          ]
+        }
+      ]
+    },
+    {
+      "id_bloc": "bloc_3",
+      "nom": "Analyse BI & Visualisation",
+      "description": "L'interface avec le métier et la restitution.",
+      "sous_blocs": [
+        {
+          "nom": "Dataviz & Reporting",
+          "competences": [
+            "création de tableaux de bord (power bi, tableau)",
+            "data storytelling et choix des graphiques",
+            "design d'expérience utilisateur (ux) pour la data",
+            "visualisation programmatique (plotly, streamlit)"
+          ]
+        },
+        {
+          "nom": "Analyse Métier",
+          "competences": [
+            "langages de calcul bi (dax, m, lookml)",
+            "définition de kpis et métriques actionnables",
+            "analyse exploratoire (eda) et profiling",
+            "self-service bi et autonomisation des utilisateurs"
+          ]
+        }
+      ]
+    },
+    {
+      "id_bloc": "bloc_4",
+      "nom": "Data Science & IA Avancée",
+      "description": "L'intelligence prédictive et générative.",
+      "sous_blocs": [
+        {
+          "nom": "Machine Learning Classique",
+          "competences": [
+            "algorithmes supervisés (classification, régression)",
+            "algorithmes non-supervisés (clustering, pca)",
+            "feature engineering et sélection de variables",
+            "évaluation de modèles (auc, rmse, f1-score)"
+          ]
+        },
+        {
+          "nom": "GenAI & NLP",
+          "competences": [
+            "architecture rag (retrieval-augmented generation)",
+            "utilisation d'apis llm (openai, gemini, anthropic)",
+            "prompt engineering avancé (chain-of-thought)",
+            "bases de données vectorielles (pinecone, weaviate, milvus)"
+          ]
+        },
+        {
+          "nom": "MLOps",
+          "competences": [
+            "tracking d'expériences (mlflow, weights & biases)",
+            "déploiement de modèles (api rest, docker)",
+            "monitoring de modèles en production (data drift)"
+          ]
+        }
+      ]
+    },
+    {
+      "id_bloc": "bloc_5",
+      "nom": "Gouvernance & Qualité (Data Management)",
+      "description": "La confiance et la sécurité de la donnée.",
+      "sous_blocs": [
+        {
+          "nom": "Qualité des Données",
+          "competences": [
+            "tests automatisés de données (great expectations, dbt tests)",
+            "détection d'anomalies et alerting",
+            "nettoyage et déduplication de données"
+          ]
+        },
+        {
+          "nom": "Gouvernance & Conformité",
+          "competences": [
+            "data cataloging et dictionnaire de données (datahub, amundsen)",
+            "data lineage (traçabilité de la donnée)",
+            "gestion des accès et sécurité (rbac, iam)",
+            "conformité rgpd et pii (anonymisation)"
+          ]
+        }
+      ]
+    }
+  ],
+  "profils_metiers": [
+    {
+      "id_metier": "job_1",
+      "titre": "Analytics Engineer",
+      "description": "L'expert de la transformation moderne (dbt + SQL).",
+      "blocs_requis": ["bloc_1", "bloc_3", "bloc_5"],
+      "seuil_minimum": 0.75
+    },
+    {
+      "id_metier": "job_2",
+      "titre": "Data Engineer",
+      "description": "L'architecte des tuyaux et de l'infra.",
+      "blocs_requis": ["bloc_1", "bloc_2", "bloc_5"],
+      "seuil_minimum": 0.8
+    },
+    {
+      "id_metier": "job_3",
+      "titre": "AI Engineer",
+      "description": "Le développeur d'applications basées sur les LLMs.",
+      "blocs_requis": ["bloc_4", "bloc_2"],
+      "seuil_minimum": 0.8
+    },
+    {
+      "id_metier": "job_4",
+      "titre": "Data Scientist",
+      "description": "Le mathématicien de la donnée.",
+      "blocs_requis": ["bloc_4", "bloc_1"],
+      "seuil_minimum": 0.75
+    },
+    {
+      "id_metier": "job_5",
+      "titre": "Data Architect",
+      "description": "Le garant de la vision technique globale.",
+      "blocs_requis": ["bloc_1", "bloc_2", "bloc_5"],
+      "seuil_minimum": 0.85
+    }
+  ]
+}
