@@ -45,8 +45,7 @@ def get_or_create_clean_data(raw_path: str, clean_path: str) -> pd.DataFrame:
     except:
         df = pd.read_csv(raw_path, engine="python", on_bad_lines="skip")
 
-    # 3. NETTOYAGE AGRESSIF
-    # On force les noms de colonnes si elles sont mal détectées
+    # 3.On force les noms de colonnes si elles sont mal détectées
     if len(df.columns) == 4: 
         df.columns = ['CompetencyID','Competency','BlockID','BlockName']
     
@@ -59,6 +58,6 @@ def get_or_create_clean_data(raw_path: str, clean_path: str) -> pd.DataFrame:
         # On supprime les lignes vides
         df = df[df['Competency'] != ""]
 
-    # 4. Sauvegarde
+
     df.to_csv(clean_path, index=False)
     return df
