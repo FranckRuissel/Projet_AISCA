@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px 
-# Note : Graphviz retiré comme demandé
+# Note : Graphviz retiré
 
 # Import des modules internes
 from src.sbert_engine import SBERTEngine
@@ -13,6 +13,16 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# --- CONFIGURATION : MAPPING DES NOMS DE BLOCS (HARDCODÉ POUR SÉCURITÉ) ---
+# C'est ici qu'on force l'affichage des vrais noms sur le graphique
+REFERENTIEL_NOMS = {
+    "bloc_1": "Architecture Data & Modélisation",
+    "bloc_2": "Ingénierie Big Data & DevOps",
+    "bloc_3": "Analyse BI & Visualisation",
+    "bloc_4": "Data Science & IA Avancée",
+    "bloc_5": "Gouvernance & Qualité Data"
+}
 
 # --- CHARGEMENT DES MOTEURS ---
 @st.cache_resource
@@ -28,14 +38,6 @@ try:
 except Exception as e:
     st.error(f"Erreur critique lors du chargement : {e}")
     st.stop()
-
-# --- RECUPERATION DU MAPPING (BlocID -> Vrai Nom) ---
-# On utilise le dataframe déjà chargé par SBERT pour faire la traduction
-if not sbert.df_competences.empty:
-    # Crée un dictionnaire : {'bloc_1': 'Architecture Data', 'bloc_2': 'Big Data'...}
-    block_mapping = sbert.df_competences.drop_duplicates('BlockID').set_index('BlockID')['BlockName'].to_dict()
-else:
-    block_mapping = {}
 
 # --- EN-TÊTE ---
 st.title("AISCA : Assistant Intelligent de Carrière")
@@ -92,7 +94,7 @@ if analyze_btn:
             resultats = sbert.calculate_scores(final_inputs)
             
             top_job = resultats['recommandations_metiers'][0]
-            scores_blocs = resultats['scores_par_bloc']
+            scores_blocs = resultats['scores_par_bloc'] 
             top_details = resultats.get('top_competences_details', pd.DataFrame())
 
             # --- RÉSULTATS ---
@@ -116,29 +118,44 @@ if analyze_btn:
                 with c_radar:
                     st.markdown("#### Couverture par Domaine")
                     
-                    # --- CORRECTION NOM DES BLOCS ---
-                    # On remplace les clés (bloc_1) par les valeurs (Architecture...)
-                    radar_data = {block_mapping.get(k, k): v for k, v in scores_blocs.items()}
+                    # --- TRADUCTION DES NOMS POUR LE GRAPHIQUE ---
+                    # On utilise le dictionnaire REFERENTIEL_NOMS défini en haut
+                    radar_data_translated = {}
+                    for bloc_id, score in scores_blocs.items():
+                        # Si l'ID est dans notre dico, on prend le beau nom, sinon on garde l'ID
+                        nom_affiche = REFERENTIEL_NOMS.get(bloc_id, bloc_id)
+                        radar_data_translated[nom_affiche] = score
                     
+                    # Création DataFrame
                     df_radar = pd.DataFrame(dict(
-                        r=list(radar_data.values()),
-                        theta=list(radar_data.keys())
+                        r=list(radar_data_translated.values()),
+                        theta=list(radar_data_translated.keys())
                     ))
                     
+                    # Graphique Radar
                     fig_radar = px.line_polar(
                         df_radar, r='r', theta='theta', line_close=True,
                         range_r=[0, 1]
                     )
-                    fig_radar.update_traces(fill='toself', line_color='#004b87')
                     
-                    # --- CORRECTION DARK MODE (Fond transparent) ---
+                    # --- COULEURS FONCÉES (BLEU NUIT) ---
+                    fig_radar.update_traces(
+                        fill='toself', 
+                        line_color='#002244',  # Bleu très foncé
+                        fillcolor='rgba(0, 34, 68, 0.5)' # Même bleu avec transparence
+                    )
+                    
+                    # Layout Pro & Dark Mode Compatible
                     fig_radar.update_layout(
                         paper_bgcolor="rgba(0,0,0,0)",
                         plot_bgcolor="rgba(0,0,0,0)",
                         margin=dict(t=30, b=30, l=40, r=40),
                         polar=dict(
                             radialaxis=dict(visible=True, tickfont=dict(size=10)),
-                            angularaxis=dict(tickfont=dict(size=11))
+                            angularaxis=dict(
+                                tickfont=dict(size=11, color="#2c3e50"), # Texte gris foncé lisible
+                                rotation=90
+                            )
                         )
                     )
                     st.plotly_chart(fig_radar, use_container_width=True)
@@ -146,14 +163,19 @@ if analyze_btn:
                 with c_bar:
                     st.markdown("#### Détail Sémantique (Top 10)")
                     if not top_details.empty:
+                        # Graphique Barres
                         fig_bar = px.bar(
                             top_details.sort_values('score', ascending=True), 
                             x='score', y='Competency', orientation='h',
-                            text_auto='.1%', 
-                            color='score', 
-                            color_continuous_scale='Blues'
+                            text_auto='.1%'
                         )
-                        # --- CORRECTION DARK MODE (Fond transparent) ---
+                        
+                        # --- COULEURS FONCÉES (BLEU PÉTROLE) ---
+                        fig_bar.update_traces(
+                            marker_color='#003366', # Bleu foncé uniforme
+                            textfont_color='white'
+                        )
+                        
                         fig_bar.update_layout(
                             paper_bgcolor="rgba(0,0,0,0)",
                             plot_bgcolor="rgba(0,0,0,0)",
@@ -172,7 +194,8 @@ if analyze_btn:
             st.subheader("3. Recommandations Stratégiques")
             
             c_bio, c_plan = st.columns(2)
-            top_comp_names = [b for b, s in scores_blocs.items() if s > 0.6]
+            # On récupère les noms lisibles pour le prompt IA aussi
+            top_comp_names = [REFERENTIEL_NOMS.get(b, b) for b, s in scores_blocs.items() if s > 0.6]
 
             with c_bio:
                 st.markdown("##### Résumé Exécutif")
