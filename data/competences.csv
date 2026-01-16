@@ -27,7 +27,6 @@ C025,"[Cloud Data Warehousing] azure synapse analytics et architecture dédiée"
 C026,"[Cloud Data Warehousing] architecture lakehouse (databricks delta lake, iceberg, hudi)",bloc_1,Architecture Data & Modélisation (Data Marts)
 C027,"[Cloud Data Warehousing] séparation stockage/calcul (compute/storage separation)",bloc_1,Architecture Data & Modélisation (Data Marts)
 C028,"[Cloud Data Warehousing] gestion du cycle de vie de la donnée (data lifecycle policies)",bloc_1,Architecture Data & Modélisation (Data Marts)
-C118,"[Architecture Data & Modélisation] data mesh et architecture distribuée par domaine",bloc_1,Architecture Data & Modélisation (Data Marts)
 C029,"[Traitement Distribué & Streaming] développement apache spark (pyspark, scala) avancé",bloc_2,Ingénierie Big Data & DevOps
 C030,"[Traitement Distribué & Streaming] optimisation spark (catalyst optimizer, tungsten, partitioning)",bloc_2,Ingénierie Big Data & DevOps
 C031,"[Traitement Distribué & Streaming] gestion de la mémoire et du gc dans spark",bloc_2,Ingénierie Big Data & DevOps
@@ -38,10 +37,6 @@ C035,"[Traitement Distribué & Streaming] traitement de flux avec apache flink o
 C036,"[Traitement Distribué & Streaming] message queuing (rabbitmq, amazon sqs/sns)",bloc_2,Ingénierie Big Data & DevOps
 C037,"[Traitement Distribué & Streaming] traitement batch vs streaming (lambda vs kappa architecture)",bloc_2,Ingénierie Big Data & DevOps
 C038,"[Traitement Distribué & Streaming] stockage objet (aws s3, azure blob, gcs) et formats (parquet, orc)",bloc_2,Ingénierie Big Data & DevOps
-C114,"[Bases de Données NoSQL] bases documentaires (mongodb, cosmosdb)",bloc_2,Ingénierie Big Data & DevOps
-C115,"[Bases de Données NoSQL] bases clé-valeur et cache (redis, dynamodb)",bloc_2,Ingénierie Big Data & DevOps
-C116,"[Bases de Données NoSQL] moteurs de recherche et indexation (elasticsearch, opensearch, solr)",bloc_2,Ingénierie Big Data & DevOps
-C117,"[Bases de Données NoSQL] bases orientées colonnes (cassandra, hbase)",bloc_2,Ingénierie Big Data & DevOps
 C039,"[Infrastructure & IaC] conteneurisation avec docker (multi-stage builds)",bloc_2,Ingénierie Big Data & DevOps
 C040,"[Infrastructure & IaC] orchestration avec kubernetes (pods, services, ingress)",bloc_2,Ingénierie Big Data & DevOps
 C041,"[Infrastructure & IaC] gestion des packages kubernetes avec helm",bloc_2,Ingénierie Big Data & DevOps
@@ -92,8 +87,6 @@ C085,"[GenAI & NLP] fine-tuning de llm (peft, lora, qlora)",bloc_4,Data Science 
 C086,"[GenAI & NLP] tokenization et embeddings (word2vec, sbert)",bloc_4,Data Science & IA Avancée
 C087,"[GenAI & NLP] agents ia et outils (autogen, crewai)",bloc_4,Data Science & IA Avancée
 C088,"[GenAI & NLP] évaluation de llm (ragas, trulens)",bloc_4,Data Science & IA Avancée
-C122,"[Computer Vision & Audio] traitement d'images (cnn, opencv, yolo)",bloc_4,Data Science & IA Avancée
-C123,"[Computer Vision & Audio] traitement audio et speech-to-text (whisper, torchaudio)",bloc_4,Data Science & IA Avancée
 C089,"[MLOps & Engineering] tracking d'expériences avec mlflow ou weights & biases",bloc_4,Data Science & IA Avancée
 C090,"[MLOps & Engineering] pipelines de ml automatisés (kubeflow, vertex ai pipelines)",bloc_4,Data Science & IA Avancée
 C091,"[MLOps & Engineering] feature stores (feast, tecton)",bloc_4,Data Science & IA Avancée
@@ -119,3 +112,10 @@ C110,"[Gouvernance & Conformité] techniques d'anonymisation et de pseudonymisat
 C111,"[Gouvernance & Conformité] data contracts et gestion des schémas",bloc_5,Gouvernance & Qualité (Data Management)
 C112,"[Gouvernance & Conformité] master data management (mdm) concepts",bloc_5,Gouvernance & Qualité (Data Management)
 C113,"[Gouvernance & Conformité] finops data (gestion et optimisation des coûts cloud)",bloc_5,Gouvernance & Qualité (Data Management)
+C114,"[Bases de Données NoSQL] bases documentaires (mongodb, cosmosdb)",bloc_2,Ingénierie Big Data & DevOps
+C115,"[Bases de Données NoSQL] bases clé-valeur et cache (redis, dynamodb)",bloc_2,Ingénierie Big Data & DevOps
+C116,"[Bases de Données NoSQL] moteurs de recherche et indexation (elasticsearch, opensearch, solr)",bloc_2,Ingénierie Big Data & DevOps
+C117,"[Bases de Données NoSQL] bases orientées colonnes (cassandra, hbase)",bloc_2,Ingénierie Big Data & DevOps
+C118,"[Architecture Data & Modélisation] data mesh et architecture distribuée par domaine",bloc_1,Architecture Data & Modélisation (Data Marts)
+C122,"[Computer Vision & Audio] traitement d'images (cnn, opencv, yolo)",bloc_4,Data Science & IA Avancée
+C123,"[Computer Vision & Audio] traitement audio et speech-to-text (whisper, torchaudio)",bloc_4,Data Science & IA Avancée

@@ -1,0 +1,121 @@
+CompetencyID,Competency,BlockID,BlockName
+C001,"[Modélisation de Données] modélisation dimensionnelle (kimball, star schema)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C002,"[Modélisation de Données] data vault modeling (hubs, links, satellites)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C003,"[Modélisation de Données] gestion des scd (slowly changing dimensions type 1, 2, 3, 4)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C004,"[Modélisation de Données] conception de modèles conceptuels et logiques (mcd, mld)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C005,"[Modélisation de Données] normalisation de base de données (3nf, bcnf)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C006,[Modélisation de Données] modélisation one big table (obt) pour l'analytique,bloc_1,Architecture Data & Modélisation (Data Marts)
+C007,[Modélisation de Données] conception de schémas en flocon (snowflake schema),bloc_1,Architecture Data & Modélisation (Data Marts)
+C008,[Modélisation de Données] gestion des clés techniques (surrogate keys) et métier,bloc_1,Architecture Data & Modélisation (Data Marts)
+C009,[Modern Data Stack & ELT] transformations elt avec dbt core et dbt cloud,bloc_1,Architecture Data & Modélisation (Data Marts)
+C010,[Modern Data Stack & ELT] développement de macros et packages dbt,bloc_1,Architecture Data & Modélisation (Data Marts)
+C011,[Modern Data Stack & ELT] orchestration de workflows avec apache airflow,bloc_1,Architecture Data & Modélisation (Data Marts)
+C012,[Modern Data Stack & ELT] orchestration moderne avec dagster (assets) ou prefect,bloc_1,Architecture Data & Modélisation (Data Marts)
+C013,[Modern Data Stack & ELT] ingestion de données avec fivetran ou airbyte,bloc_1,Architecture Data & Modélisation (Data Marts)
+C014,[Modern Data Stack & ELT] développement de connecteurs d'ingestion custom (python),bloc_1,Architecture Data & Modélisation (Data Marts)
+C015,"[Modern Data Stack & ELT] sql analytique avancé (window functions, ctes, recursive ctes)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C016,"[Modern Data Stack & ELT] optimisation des requêtes sql (explain plans, indexing)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C017,[Modern Data Stack & ELT] gestion des dépendances de données,bloc_1,Architecture Data & Modélisation (Data Marts)
+C018,"[Modern Data Stack & ELT] reverse etl (hightouch, census) pour l'activation",bloc_1,Architecture Data & Modélisation (Data Marts)
+C019,"[Cloud Data Warehousing] architecture snowflake (virtual warehouses, clustering keys)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C020,[Cloud Data Warehousing] optimisation des coûts snowflake (resource monitors),bloc_1,Architecture Data & Modélisation (Data Marts)
+C021,"[Cloud Data Warehousing] google bigquery (partitioning, clustering, slots)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C022,[Cloud Data Warehousing] bigquery ml pour le machine learning sql,bloc_1,Architecture Data & Modélisation (Data Marts)
+C023,"[Cloud Data Warehousing] aws redshift (distkeys, sortkeys, wlm)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C024,[Cloud Data Warehousing] aws athena et glue pour le requêtage serverless,bloc_1,Architecture Data & Modélisation (Data Marts)
+C025,[Cloud Data Warehousing] azure synapse analytics et architecture dédiée,bloc_1,Architecture Data & Modélisation (Data Marts)
+C026,"[Cloud Data Warehousing] architecture lakehouse (databricks delta lake, iceberg, hudi)",bloc_1,Architecture Data & Modélisation (Data Marts)
+C027,[Cloud Data Warehousing] séparation stockage/calcul (compute/storage separation),bloc_1,Architecture Data & Modélisation (Data Marts)
+C028,[Cloud Data Warehousing] gestion du cycle de vie de la donnée (data lifecycle policies),bloc_1,Architecture Data & Modélisation (Data Marts)
+C029,"[Traitement Distribué & Streaming] développement apache spark (pyspark, scala) avancé",bloc_2,Ingénierie Big Data & DevOps
+C030,"[Traitement Distribué & Streaming] optimisation spark (catalyst optimizer, tungsten, partitioning)",bloc_2,Ingénierie Big Data & DevOps
+C031,[Traitement Distribué & Streaming] gestion de la mémoire et du gc dans spark,bloc_2,Ingénierie Big Data & DevOps
+C032,[Traitement Distribué & Streaming] streaming temps réel avec apache kafka,bloc_2,Ingénierie Big Data & DevOps
+C033,[Traitement Distribué & Streaming] kafka connect et kafka streams,bloc_2,Ingénierie Big Data & DevOps
+C034,"[Traitement Distribué & Streaming] schema registry et formats (avro, protobuf)",bloc_2,Ingénierie Big Data & DevOps
+C035,[Traitement Distribué & Streaming] traitement de flux avec apache flink ou spark streaming,bloc_2,Ingénierie Big Data & DevOps
+C036,"[Traitement Distribué & Streaming] message queuing (rabbitmq, amazon sqs/sns)",bloc_2,Ingénierie Big Data & DevOps
+C037,[Traitement Distribué & Streaming] traitement batch vs streaming (lambda vs kappa architecture),bloc_2,Ingénierie Big Data & DevOps
+C038,"[Traitement Distribué & Streaming] stockage objet (aws s3, azure blob, gcs) et formats (parquet, orc)",bloc_2,Ingénierie Big Data & DevOps
+C039,[Infrastructure & IaC] conteneurisation avec docker (multi-stage builds),bloc_2,Ingénierie Big Data & DevOps
+C040,"[Infrastructure & IaC] orchestration avec kubernetes (pods, services, ingress)",bloc_2,Ingénierie Big Data & DevOps
+C041,[Infrastructure & IaC] gestion des packages kubernetes avec helm,bloc_2,Ingénierie Big Data & DevOps
+C042,"[Infrastructure & IaC] infrastructure as code avec terraform (modules, state)",bloc_2,Ingénierie Big Data & DevOps
+C043,[Infrastructure & IaC] infrastructure as code avec ansible ou pulumi,bloc_2,Ingénierie Big Data & DevOps
+C044,"[Infrastructure & IaC] scripting d'automatisation avancé (bash, python, makefiles)",bloc_2,Ingénierie Big Data & DevOps
+C045,"[Infrastructure & IaC] ci/cd pour la data (github actions, gitlab ci, jenkins)",bloc_2,Ingénierie Big Data & DevOps
+C046,"[Infrastructure & IaC] gestion des environnements (dev, staging, prod)",bloc_2,Ingénierie Big Data & DevOps
+C047,"[Infrastructure & IaC] monitoring d'infrastructure (prometheus, grafana, datadog)",bloc_2,Ingénierie Big Data & DevOps
+C048,"[Infrastructure & IaC] gestion des secrets (vault, aws secrets manager)",bloc_2,Ingénierie Big Data & DevOps
+C049,"[Dataviz & Reporting] création de tableaux de bord interactifs (power bi, tableau)",bloc_3,Analyse BI & Visualisation
+C050,[Dataviz & Reporting] calculs lod (level of detail) dans tableau,bloc_3,Analyse BI & Visualisation
+C051,[Dataviz & Reporting] modélisation sémantique dans power bi,bloc_3,Analyse BI & Visualisation
+C052,[Dataviz & Reporting] data storytelling et principes de design (gestalt),bloc_3,Analyse BI & Visualisation
+C053,"[Dataviz & Reporting] choix des graphiques appropriés (bar, line, scatter, sankey)",bloc_3,Analyse BI & Visualisation
+C054,[Dataviz & Reporting] design d'expérience utilisateur (ux/ui) pour la data,bloc_3,Analyse BI & Visualisation
+C055,[Dataviz & Reporting] visualisation programmatique avec plotly ou altair,bloc_3,Analyse BI & Visualisation
+C056,[Dataviz & Reporting] création d'applications data avec streamlit ou dash,bloc_3,Analyse BI & Visualisation
+C057,[Dataviz & Reporting] accessibilité dans la visualisation de données,bloc_3,Analyse BI & Visualisation
+C058,"[Dataviz & Reporting] géospatial et cartographie (maps, gis)",bloc_3,Analyse BI & Visualisation
+C059,"[Analyse Métier] langages de calcul bi avancés (dax, m, lookml)",bloc_3,Analyse BI & Visualisation
+C060,[Analyse Métier] analyse de cohortes et de rétention,bloc_3,Analyse BI & Visualisation
+C061,"[Analyse Métier] définition de kpis (okr, smart metrics)",bloc_3,Analyse BI & Visualisation
+C062,[Analyse Métier] analyse exploratoire (eda) et profiling statistique,bloc_3,Analyse BI & Visualisation
+C063,[Analyse Métier] segmentation client (rfm analysis),bloc_3,Analyse BI & Visualisation
+C064,[Analyse Métier] analyse de l'entonnoir (funnel analysis),bloc_3,Analyse BI & Visualisation
+C065,[Analyse Métier] self-service bi et gouvernance des rapports,bloc_3,Analyse BI & Visualisation
+C066,"[Analyse Métier] excel avancé pour l'analyse rapide (pivot, vba)",bloc_3,Analyse BI & Visualisation
+C067,[Analyse Métier] tests d'hypothèses statistiques pour le business,bloc_3,Analyse BI & Visualisation
+C068,[Analyse Métier] forecasting simple et analyse de tendances,bloc_3,Analyse BI & Visualisation
+C069,"[Machine Learning Classique] algorithmes supervisés (régression, random forest, svm)",bloc_4,Data Science & IA Avancée
+C070,"[Machine Learning Classique] algorithmes de boosting (xgboost, lightgbm, catboost)",bloc_4,Data Science & IA Avancée
+C071,"[Machine Learning Classique] algorithmes non-supervisés (k-means, dbscan, pca, t-sne)",bloc_4,Data Science & IA Avancée
+C072,[Machine Learning Classique] feature engineering avancé et sélection de variables,bloc_4,Data Science & IA Avancée
+C073,"[Machine Learning Classique] gestion du déséquilibre de classes (smote, undersampling)",bloc_4,Data Science & IA Avancée
+C074,"[Machine Learning Classique] évaluation de modèles (roc-auc, precision-recall, rmse, mae)",bloc_4,Data Science & IA Avancée
+C075,"[Machine Learning Classique] validation croisée (k-fold, stratified)",bloc_4,Data Science & IA Avancée
+C076,"[Machine Learning Classique] interprétabilité des modèles (shap, lime)",bloc_4,Data Science & IA Avancée
+C077,"[Machine Learning Classique] séries temporelles (arima, prophet)",bloc_4,Data Science & IA Avancée
+C078,[Machine Learning Classique] systèmes de recommandation (collaborative filtering),bloc_4,Data Science & IA Avancée
+C079,"[GenAI & NLP] architectures transformers (bert, gpt, t5)",bloc_4,Data Science & IA Avancée
+C080,[GenAI & NLP] architecture rag (retrieval-augmented generation) avancée,bloc_4,Data Science & IA Avancée
+C081,"[GenAI & NLP] frameworks llm (langchain, llamaindex, haystack)",bloc_4,Data Science & IA Avancée
+C082,"[GenAI & NLP] utilisation d'apis llm (openai, anthropic, google gemini)",bloc_4,Data Science & IA Avancée
+C083,"[GenAI & NLP] prompt engineering avancé (chain-of-thought, few-shot)",bloc_4,Data Science & IA Avancée
+C084,"[GenAI & NLP] bases de données vectorielles (pinecone, weaviate, chroma, qdrant)",bloc_4,Data Science & IA Avancée
+C085,"[GenAI & NLP] fine-tuning de llm (peft, lora, qlora)",bloc_4,Data Science & IA Avancée
+C086,"[GenAI & NLP] tokenization et embeddings (word2vec, sbert)",bloc_4,Data Science & IA Avancée
+C087,"[GenAI & NLP] agents ia et outils (autogen, crewai)",bloc_4,Data Science & IA Avancée
+C088,"[GenAI & NLP] évaluation de llm (ragas, trulens)",bloc_4,Data Science & IA Avancée
+C089,[MLOps & Engineering] tracking d'expériences avec mlflow ou weights & biases,bloc_4,Data Science & IA Avancée
+C090,"[MLOps & Engineering] pipelines de ml automatisés (kubeflow, vertex ai pipelines)",bloc_4,Data Science & IA Avancée
+C091,"[MLOps & Engineering] feature stores (feast, tecton)",bloc_4,Data Science & IA Avancée
+C092,"[MLOps & Engineering] model serving (api rest, fastapi, triton inference server)",bloc_4,Data Science & IA Avancée
+C093,"[MLOps & Engineering] déploiement de modèles sur le cloud (sagemaker, vertex ai)",bloc_4,Data Science & IA Avancée
+C094,"[MLOps & Engineering] monitoring de modèles en production (data drift, concept drift)",bloc_4,Data Science & IA Avancée
+C095,[MLOps & Engineering] tests unitaires et d'intégration pour le ml,bloc_4,Data Science & IA Avancée
+C096,[MLOps & Engineering] gestion des versions de données (dvc),bloc_4,Data Science & IA Avancée
+C097,"[Qualité des Données] frameworks de qualité (great expectations, soda)",bloc_5,Gouvernance & Qualité (Data Management)
+C098,[Qualité des Données] tests de données dans dbt (generic & singular tests),bloc_5,Gouvernance & Qualité (Data Management)
+C099,"[Qualité des Données] observabilité des données (monte carlo, elementary)",bloc_5,Gouvernance & Qualité (Data Management)
+C100,[Qualité des Données] détection d'anomalies et alerting automatisé,bloc_5,Gouvernance & Qualité (Data Management)
+C101,[Qualité des Données] stratégies de nettoyage et d'imputation de données,bloc_5,Gouvernance & Qualité (Data Management)
+C102,[Qualité des Données] gestion des doublons et déduplication,bloc_5,Gouvernance & Qualité (Data Management)
+C103,[Qualité des Données] profiling de données automatisé,bloc_5,Gouvernance & Qualité (Data Management)
+C104,"[Gouvernance & Conformité] data cataloging (datahub, amundsen, atlan, collibra)",bloc_5,Gouvernance & Qualité (Data Management)
+C105,[Gouvernance & Conformité] documentation technique et métier (data dictionary),bloc_5,Gouvernance & Qualité (Data Management)
+C106,[Gouvernance & Conformité] data lineage de bout en bout (column-level lineage),bloc_5,Gouvernance & Qualité (Data Management)
+C107,[Gouvernance & Conformité] gestion des accès basés sur les rôles (rbac) et attributs (abac),bloc_5,Gouvernance & Qualité (Data Management)
+C108,[Gouvernance & Conformité] sécurité des données (chiffrement au repos et en transit),bloc_5,Gouvernance & Qualité (Data Management)
+C109,"[Gouvernance & Conformité] conformité rgpd, ccpa et droit à l'oubli",bloc_5,Gouvernance & Qualité (Data Management)
+C110,[Gouvernance & Conformité] techniques d'anonymisation et de pseudonymisation,bloc_5,Gouvernance & Qualité (Data Management)
+C111,[Gouvernance & Conformité] data contracts et gestion des schémas,bloc_5,Gouvernance & Qualité (Data Management)
+C112,[Gouvernance & Conformité] master data management (mdm) concepts,bloc_5,Gouvernance & Qualité (Data Management)
+C113,[Gouvernance & Conformité] finops data (gestion et optimisation des coûts cloud),bloc_5,Gouvernance & Qualité (Data Management)
+C114,"[Bases de Données NoSQL] bases documentaires (mongodb, cosmosdb)",bloc_2,Ingénierie Big Data & DevOps
+C115,"[Bases de Données NoSQL] bases clé-valeur et cache (redis, dynamodb)",bloc_2,Ingénierie Big Data & DevOps
+C116,"[Bases de Données NoSQL] moteurs de recherche et indexation (elasticsearch, opensearch, solr)",bloc_2,Ingénierie Big Data & DevOps
+C117,"[Bases de Données NoSQL] bases orientées colonnes (cassandra, hbase)",bloc_2,Ingénierie Big Data & DevOps
+C118,[Architecture Data & Modélisation] data mesh et architecture distribuée par domaine,bloc_1,Architecture Data & Modélisation (Data Marts)
+C122,"[Computer Vision & Audio] traitement d'images (cnn, opencv, yolo)",bloc_4,Data Science & IA Avancée
+C123,"[Computer Vision & Audio] traitement audio et speech-to-text (whisper, torchaudio)",bloc_4,Data Science & IA Avancée

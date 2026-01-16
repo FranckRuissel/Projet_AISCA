@@ -5,3 +5,4 @@ pandas
 google-generativeai
 python-dotenv
 scikit-learn
+graphviz

@@ -1,0 +1,8 @@
+JobID,Job Title,Required Competencies
+job_1,Analytics Engineer,bloc_1; bloc_3; bloc_5
+job_2,Data Engineer,bloc_1; bloc_2; bloc_5
+job_3,AI Engineer,bloc_4; bloc_2
+job_4,Data Scientist,bloc_4; bloc_1
+job_5,Data Architect,bloc_1; bloc_2; bloc_5
+job_6,MLOps Engineer,bloc_2; bloc_4
+job_7,Business Intelligence Analyst,bloc_3; bloc_1
